@@ -25,10 +25,10 @@ public class task2b
 		byte[] fileInput = new byte[100];
 		try {
 			FileInputStream file = new FileInputStream(filename);
-/*			Checksum checksum = new CRC32();
-			CheckedInputStream cs = new CheckedInputStream(file, checksum);
+			//ERROR current checksum calculated is 0
+			CheckedInputStream cs = new CheckedInputStream(file, new CRC32());
 			System.out.println(cs.getChecksum().getValue());
-*/			try {
+		try {
 				file.read(fileInput);
 				file.close();
 			}catch(IOException ex)
