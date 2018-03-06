@@ -29,13 +29,16 @@ public class task2a {
 			//create a checksum from input
 			Checksum checksum = new CRC32();
 			checksum.update(input, 0, input.length);
+			System.out.println("DEBUG: " + input);
+			System.out.println("DEBUG: " + input.length);
 		
 			//print checksum to screen
 			System.out.println("Checksum: " + checksum.getValue());
 			byte[] cs = longToBytes(checksum.getValue());	
 			//write checksum to file
 			csFile.write(cs);
-		
+			
+				
 			//write input to file
 			file.write(input);
 			return true;
