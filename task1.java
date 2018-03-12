@@ -16,7 +16,7 @@ public class task1 {
 		try {
 			InputStream input = System.in;
 			OutputStream output = System.out;
-			byte[] byteArray = new byte[100];
+			byte[] byteArray = new byte[1024];
 			//Create a char array to output to screen for user prompt
 			char[] prompt = new char [] {'E','n','t','e','r',' ','I','n','p','u','t',':','\n'};
 			byte[] bytePrompt = new byte[prompt.length*2];

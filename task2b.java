@@ -14,8 +14,6 @@ public class task2b
 		display(data);
 		Checksum dataChecksum = new CRC32();
 		dataChecksum.update(data, 0, data.length);
-		System.out.println("DEBUG: " + data);
-		System.out.println("DEBUG: " + data.length);
 		System.out.println(dataChecksum.getValue());
 	
 		data = readFile("checksum");
@@ -25,7 +23,7 @@ public class task2b
 //read file in one byte at a time and return byte array from file
 	public static byte[] readFile(String filename)
 	{
-		byte[] fileInput = new byte[100];
+		byte[] fileInput = new byte[1024];
 		try {
 			FileInputStream file = new FileInputStream(filename);
 		try {

@@ -29,8 +29,6 @@ public class task2a {
 			//create a checksum from input
 			Checksum checksum = new CRC32();
 			checksum.update(input, 0, input.length);
-			System.out.println("DEBUG: " + input);
-			System.out.println("DEBUG: " + input.length);
 		
 			//print checksum to screen
 			System.out.println("Checksum: " + checksum.getValue());
@@ -61,7 +59,7 @@ public class task2a {
 			InputStream input = System.in;
 			OutputStream output = System.out;
 			//input buffer byte array
-			byte[] byteArray = new byte[100];
+			byte[] byteArray = new byte[1024];
 			//create char array for output prompt
 			char[] prompt = new char [] {'E','n','t','e','r',' ','I','n','p','u','t',':','\n'};
 			byte[] bytePrompt = new byte[prompt.length*2];
